@@ -1,2 +1,2 @@
-## my PortFilio  !
+## my portfolio  !
 > using react,  nodejs, awesome js effect and more ... 
