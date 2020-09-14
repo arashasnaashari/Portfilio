@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from "react";
+import Container from "./home/Container";
+import Project from "./projectBlogChalenge/Project";
+import Chalenge from "./projectBlogChalenge/Chalenge";
+import Blog from "./projectBlogChalenge/Blog";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/" exact component={Container} />
+        <Route path="/project" exact component={Project} />
+        <Route path="/chalenge" exact component={Chalenge} />
+        <Route path="/blog" exact component={Blog} />
+        <Route path="/about" exact component={About} />
+        <Route path="/contact" exact component={Contact} />
+        <Route component={NotFound} />
+      </Switch>
+    </Router>
   );
 }
-
-export default App;
